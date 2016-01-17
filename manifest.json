@@ -1,29 +1,24 @@
 {
   "manifest_version": 2,
-
-  "name": "Sci-trick", "icons": {
-      "128": "icon/favicon-128.png",
-      "16": "icon/favicon-16.png",
-        "48": "icon/favicon-48.png",
-        "32": "icon/favicon-32.png",
-        "96": "icon/favicon-96.png",
-        "196": "icon/favicon-196.png"
-
-   },
+  "name": "Sci-trick",
+  "icons":
+  {
+    "128": "icon/favicon-128.png",
+    "16": "icon/favicon-16.png",
+    "48": "icon/favicon-48.png",
+    "32": "icon/favicon-32.png",
+    "96": "icon/favicon-96.png",
+    "196": "icon/favicon-196.png"
+  },
   "description": "Free access to scientific articles through sci-hub.io service.",
   "version": "1.0",
-
-
-  "permissions": [
-     "activeTab",
-     "storage",
-     "tabs"
-  ],
-  "browser_action": {
+  "permissions": ["activeTab", "storage", "tabs"],
+  "browser_action":
+  {
     "default_icon": "icon/enabled.png"
   },
-
-  "background": {
+  "background":
+  {
     "scripts": ["background.js"],
     "persistent": false
   }
