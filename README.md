@@ -1,4 +1,4 @@
-Sci-trick
+![alt tag](https://raw.githubusercontent.com/hamdiBh/sci-trick/master/icon/favicon-96.png)Sci-trick
 ==========
 
 Chrome extension that appends ".sci-hub.io" to active tab domain, allowing free access to scientific articles.
