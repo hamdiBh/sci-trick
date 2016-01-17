@@ -16,9 +16,6 @@ storage.get(state,function(result){
   //console output = myVariableKeyName {myTestVar:'my test var'}
 });}
 
-function Storage(p1, p2) {
-    return p1 * p2;              // The function returns the product of p1 and p2
-}
 
 storage.get(state,function(result){
   if(result.state == true){
@@ -56,6 +53,7 @@ chrome.browserAction.setIcon({path:"icon/disabled.png"});
 obj[state] = false;
 storage.set(obj);
 }else{
+
 chrome.browserAction.setIcon({path:"icon/enabled.png"});
 obj[state] = true;
 storage.set(obj);}
