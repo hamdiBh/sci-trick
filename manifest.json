@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "sci-trick", "icons": {
+  "name": "Sci-trick", "icons": {
       "128": "icon/favicon-128.png",
       "16": "icon/favicon-16.png",
         "48": "icon/favicon-48.png",
