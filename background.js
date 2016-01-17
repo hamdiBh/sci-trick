@@ -1,6 +1,4 @@
 // Copyright (c) 2016 H@mdi.
-
-
 function initializeDefaultValues()
 {
   console.log("value : " + localStorage.getItem('state'));
@@ -11,9 +9,9 @@ function initializeDefaultValues()
   // set default values for your variable here
   localStorage.setItem('state', 1);
   chrome.browserAction.setTitle(
-      {
-        title: "Sci-trick [enabled]"
-      });
+  {
+    title: "Sci-trick [enabled]"
+  });
 }
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab)
 {
@@ -44,21 +42,17 @@ chrome.browserAction.onClicked.addListener(function (tab)
       path: "icon/enabled.png"
     });
     localStorage.setItem('state', 1);
-
-      chrome.browserAction.setTitle(
-      {
-        title: "Sci-trick [enabled]"
-      });
-
+    chrome.browserAction.setTitle(
+    {
+      title: "Sci-trick [enabled]"
+    });
   }
   else
   {
-  
-      chrome.browserAction.setTitle(
-      {
-        title: "Sci-trick [disabled]"
-      });
-
+    chrome.browserAction.setTitle(
+    {
+      title: "Sci-trick [disabled]"
+    });
     chrome.browserAction.setIcon(
     {
       path: "icon/disabled.png"
