@@ -19,7 +19,7 @@
   ],
 
   "browser_action": {
-    "default_icon": "icon/favicon-128.png"
+    "default_icon": "enabled.png"
   },
 
   "background": {
