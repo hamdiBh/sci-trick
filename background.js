@@ -32,20 +32,22 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab)
 });
 chrome.browserAction.onClicked.addListener(function (tab)
 {
-  if (localStorage.getItem('state') == 1)
+  if (localStorage.getItem('state') == 0)
+  {
+
+     chrome.browserAction.setIcon(
+    {
+      path: "icon/enabled.png"
+    });
+    localStorage.setItem('state', 1);
+   
+  }
+  else
   {
     chrome.browserAction.setIcon(
     {
       path: "icon/disabled.png"
     });
     localStorage.setItem('state', 0);
-  }
-  else
-  {
-    chrome.browserAction.setIcon(
-    {
-      path: "icon/enabled.png"
-    });
-    localStorage.setItem('state', 1);
   }
 });
