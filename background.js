@@ -48,7 +48,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 
 storage.get(state,function(result){
   if(result.state == true){
-chrome.browserAction.setIcon({path:"disabled.png"});
+chrome.browserAction.setIcon({path:"icon/disabled.png"});
 obj[state] = false;
 
 storage.set(obj);
@@ -57,7 +57,7 @@ storage.set(obj);
 obj[state] = true;
 
 storage.set(obj);
-chrome.browserAction.setIcon({path:"enabled.png"});
+chrome.browserAction.setIcon({path:"icon/enabled.png"});
 }
 
    

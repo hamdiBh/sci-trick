@@ -13,13 +13,14 @@
   "description": "Free access to scientific articles through sci-hub.io service.",
   "version": "1.0",
 
+
   "permissions": [
      "activeTab",
+     "storage",
      "tabs"
   ],
-
   "browser_action": {
-    "default_icon": "enabled.png"
+    "default_icon": "icon/enabled.png"
   },
 
   "background": {
