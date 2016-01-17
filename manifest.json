@@ -1,7 +1,15 @@
 {
   "manifest_version": 2,
 
-  "name": "sci-trick",
+  "name": "sci-trick", "icons": {
+      "128": "icon/favicon-128.png",
+      "16": "icon/favicon-16.png",
+        "48": "icon/favicon-48.png",
+        "32": "icon/favicon-32.png",
+        "96": "icon/favicon-96.png",
+        "196": "icon/favicon-196.png"
+
+   },
   "description": "Free access to scientific articles through sci-hub.io service.",
   "version": "1.0",
 
@@ -11,7 +19,7 @@
   ],
 
   "browser_action": {
-    "default_icon": "icon.png"
+    "default_icon": "icon/favicon-128.png"
   },
 
   "background": {
