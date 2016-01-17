@@ -23,8 +23,8 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab)
       arr[2] = arr[2] + ".sci-hub.io";
       var new_url = arr.join('/');
       console.log('Redirecting ' + tab.url + ' to ' + new_url);
-      chrome.tabs.update(tab.id,
-      {
+      chrome.tabs.update(tab.id
+      , {
         url: new_url
       });
     }
@@ -34,16 +34,26 @@ chrome.browserAction.onClicked.addListener(function (tab)
 {
   if (localStorage.getItem('state') == 0)
   {
-
-     chrome.browserAction.setIcon(
+    chrome.browserAction.setIcon(
     {
       path: "icon/enabled.png"
     });
     localStorage.setItem('state', 1);
-   
+
+      chrome.browserAction.setTitle(
+      {
+        title: "Sci-trick [enabled]"
+      });
+
   }
   else
   {
+  
+      chrome.browserAction.setTitle(
+      {
+        title: "Sci-trick [disabled]"
+      });
+
     chrome.browserAction.setIcon(
     {
       path: "icon/disabled.png"
