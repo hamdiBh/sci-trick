@@ -15,7 +15,7 @@ You can load it as an unpacked extension in developer mode on Chrome. Follow thi
 2. Open Chrome and access `chrome://extensions`, or just open the menu -> settings -> extensions.
 3. Check the developer mode in upper right.
 4. Click "Load unpacked extension" button
-5. Select the folder into which you zipped **Sci-trick** and click "Open".
+5. Select the folder into which you unzipped **Sci-trick** and click "Open".
 6. We're done. The extension should be available as if installed from Chrome store.
 
 [Sci-Hub]:http://sci-hub.io
