@@ -1,5 +1,5 @@
 {
-  "manifest_version": 1,
+  "manifest_version": 2,
 
   "name": "sci-trick",
   "description": "Free access to scientific articles through sci-hub.io service.",
