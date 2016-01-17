@@ -1,7 +1,7 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 1,
 
-  "name": "Sci-Hub-Fy",
+  "name": "sci-trick",
   "description": "Free access to scientific articles through sci-hub.io service.",
   "version": "1.0",
 
