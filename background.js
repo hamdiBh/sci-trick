@@ -1,5 +1,5 @@
 // Copyright (c) 2016 H@mdi.
-initializeDefaultValues();
+
 
 function initializeDefaultValues()
 {
@@ -10,6 +10,10 @@ function initializeDefaultValues()
   }
   // set default values for your variable here
   localStorage.setItem('state', 1);
+  chrome.browserAction.setTitle(
+      {
+        title: "Sci-trick [enabled]"
+      });
 }
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab)
 {
@@ -32,6 +36,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab)
 });
 chrome.browserAction.onClicked.addListener(function (tab)
 {
+  initializeDefaultValues();
   if (localStorage.getItem('state') == 0)
   {
     chrome.browserAction.setIcon(
