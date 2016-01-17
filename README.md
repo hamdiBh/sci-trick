@@ -5,7 +5,7 @@ Chrome extension that appends ".sci-hub.io" to active tab domain, allowing free 
 
 The hard work is done by [Sci-Hub].
 
-**Note:** The extension got removed from Chrome Store as they "don't allow products or services that facilitate unauthorized access to content on websites, such as circumventing paywalls or logins restrictions.". Of course you can just manually append the ".sci-hub.io", but if you still want to automate this, the instructions below should make it work.
+
 
 ## Installation
 

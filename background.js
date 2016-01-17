@@ -2,7 +2,7 @@
 
 
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-  console.log('test' + tab.url);
+  console.log('bareUrl' + tab.url);
  	origin_url = tab.url;
   var arr = origin_url.split('/');
     if((arr[2].indexOf('ieeexplore.ieee') >= 0
