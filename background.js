@@ -1,4 +1,5 @@
 // Copyright (c) 2016 H@mdi & K8.
+initializeDefaultValues();
 var Website = ["ieeexplore.iee", "link.springer", "sciencedirect", "dl.acm","onlinelibrary.wiley"];
 var Button_state = ["Sci-trick [enabled]", "Sci-trick [disabled]", "icon/enabled.png", "icon/disabled.png"]
 
@@ -50,7 +51,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab)
 
 chrome.browserAction.onClicked.addListener(function (tab)
 {
-  initializeDefaultValues();
+  
   if (localStorage.getItem('state') == 0)
   {
     localStorage.setItem('state', 1);
