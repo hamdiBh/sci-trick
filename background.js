@@ -11,10 +11,6 @@ function CheckWebsite(tab, changeInfo)
     {
       return true;
     }
-    else
-    {
-      return false;
-    }
   }
 }
 
@@ -36,7 +32,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab)
 {
   if (localStorage.getItem('state') == 1)
   {
-    console.log('bareUrl' + tab.url);
+    //console.log('bareUrl ' + tab.url);
     origin_url = tab.url;
     var arr = origin_url.split('/');
     if (CheckWebsite(tab, changeInfo))
