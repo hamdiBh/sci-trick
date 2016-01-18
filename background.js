@@ -1,4 +1,23 @@
 // Copyright (c) 2016 H@mdi.
+var Website = ["ieeexplore.iee", "link.springer", "sciencedirect", "dl.acm"];
+var Button_state = ["Sci-trick [enabled]", "Sci-trick [disabled]", "icon/enabled.png", "icon/disabled.png"]
+
+function CheckWebsite(tab, changeInfo)
+{
+  var arr = tab.url.split('/');
+  for (i = 0; i < Website.length; i++)
+  {
+    if (arr[2].indexOf(Website[i]) >= 0 && arr[2].indexOf('sci-hub') == -1 && changeInfo.status == "loading")
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+  }
+}
+
 function initializeDefaultValues()
 {
   console.log("value : " + localStorage.getItem('state'));
@@ -6,13 +25,13 @@ function initializeDefaultValues()
   {
     return;
   }
-  // set default values for your variable here
   localStorage.setItem('state', 1);
   chrome.browserAction.setTitle(
   {
     title: "Sci-trick [enabled]"
   });
 }
+
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab)
 {
   if (localStorage.getItem('state') == 1)
@@ -20,7 +39,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab)
     console.log('bareUrl' + tab.url);
     origin_url = tab.url;
     var arr = origin_url.split('/');
-    if ((arr[2].indexOf('ieeexplore.ieee') >= 0 || arr[2].indexOf('link.springer') >= 0 || arr[2].indexOf('sciencedirect') >= 0 || arr[2].indexOf('dl.acm') >= 0) && arr[2].indexOf('sci-hub') == -1 && changeInfo.status == "loading")
+    if (CheckWebsite(tab, changeInfo))
     {
       arr[2] = arr[2] + ".sci-hub.io";
       var new_url = arr.join('/');
@@ -32,31 +51,32 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab)
     }
   }
 });
+
 chrome.browserAction.onClicked.addListener(function (tab)
 {
   initializeDefaultValues();
   if (localStorage.getItem('state') == 0)
   {
+    localStorage.setItem('state', 1);
     chrome.browserAction.setIcon(
     {
-      path: "icon/enabled.png"
+      path: Button_state[2]
     });
-    localStorage.setItem('state', 1);
     chrome.browserAction.setTitle(
     {
-      title: "Sci-trick [enabled]"
+      title: Button_state[0]
     });
   }
   else
   {
-    chrome.browserAction.setTitle(
-    {
-      title: "Sci-trick [disabled]"
-    });
+    localStorage.setItem('state', 0);
     chrome.browserAction.setIcon(
     {
-      path: "icon/disabled.png"
+      path: Button_state[3]
     });
-    localStorage.setItem('state', 0);
+    chrome.browserAction.setTitle(
+    {
+      title: Button_state[1]
+    });
   }
 });
