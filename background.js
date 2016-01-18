@@ -1,4 +1,4 @@
-// Copyright (c) 2016 H@mdi & K8.
+// Copyright (c) 2016 H@mdi & KC.
 initializeDefaultValues();
 var Website = ["ieeexplore.iee", "link.springer", "sciencedirect", "dl.acm","onlinelibrary.wiley"];
 var Button_state = ["Sci-trick [enabled]", "Sci-trick [disabled]", "icon/enabled.png", "icon/disabled.png"]
