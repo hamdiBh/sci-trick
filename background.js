@@ -4,74 +4,68 @@ var Button_state = ["Sci-trick [enabled]", "Sci-trick [disabled]", "icon/enabled
 
 function CheckWebsite(tab, changeInfo)
 {
-  var arr = tab.url.split('/');
+  var arr = tab.url.split("/");
   for (i = 0; i < Website.length; i++)
-  {
-    if (arr[2].indexOf(Website[i]) >= 0 && arr[2].indexOf('sci-hub') == -1 && changeInfo.status == "loading")
-    {
-      return true;
-    }
-  }
+    if (arr[2].indexOf(Website[i]) >= 0 && -1 == arr[2].indexOf("sci-hub") && "loading" == changeInfo.status) return !0
 }
 
 function initializeDefaultValues()
 {
   console.log("value : " + localStorage.getItem('state'));
-  if (localStorage.getItem('state'))
+  null === localStorage.getItem("state") && localStorage.setItem("state", 1);
+  1 == localStorage.getItem("state") ? (chrome.browserAction.setIcon(
   {
-    return;
-  }
-  localStorage.setItem('state', 1);
-  chrome.browserAction.setTitle(
+    path: Button_state[2]
+  }), chrome.browserAction.setTitle(
   {
-    title: "Sci-trick [enabled]"
-  });
+    title: Button_state[0]
+  })) : (chrome.browserAction.setIcon(
+  {
+    path: Button_state[3]
+  }), chrome.browserAction.setTitle(
+  {
+    title: Button_state[1]
+  }));
 }
+
+function ButtonState()
+{
+  0 == localStorage.getItem("state") ? (localStorage.setItem("state", 1), chrome.browserAction.setIcon(
+  {
+    path: Button_state[2]
+  }), chrome.browserAction.setTitle(
+  {
+    title: Button_state[0]
+  })) : (localStorage.setItem("state", 0), chrome.browserAction.setIcon(
+  {
+    path: Button_state[3]
+  }), chrome.browserAction.setTitle(
+  {
+    title: Button_state[1]
+  }));
+}
+
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab)
 {
-  if (localStorage.getItem('state') == 1)
+  if (1 == localStorage.getItem("state"))
   {
-    //console.log('bareUrl ' + tab.url);
     origin_url = tab.url;
-    var arr = origin_url.split('/');
+    var arr = origin_url.split("/");
     if (CheckWebsite(tab, changeInfo))
     {
       arr[2] = arr[2] + ".sci-hub.io";
-      var new_url = arr.join('/');
-      console.log('Redirecting ' + tab.url + ' to ' + new_url);
-      chrome.tabs.update(tab.id
+      var new_url = arr.join("/");
+      console.log("Redirecting " + tab.url + " to " + new_url), chrome.tabs.update(tab.id
       , {
         url: new_url
-      });
+      })
     }
   }
 });
+
 chrome.browserAction.onClicked.addListener(function (tab)
 {
-  if (localStorage.getItem('state') == 0)
-  {
-    localStorage.setItem('state', 1);
-    chrome.browserAction.setIcon(
-    {
-      path: Button_state[2]
-    });
-    chrome.browserAction.setTitle(
-    {
-      title: Button_state[0]
-    });
-  }
-  else
-  {
-    localStorage.setItem('state', 0);
-    chrome.browserAction.setIcon(
-    {
-      path: Button_state[3]
-    });
-    chrome.browserAction.setTitle(
-    {
-      title: Button_state[1]
-    });
-  }
+  ButtonState();
 });
 chrome.runtime.onInstalled.addListener(function (details)
 {
