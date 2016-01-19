@@ -63,11 +63,10 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab)
   }
 });
 
-chrome.browserAction.onClicked.addListener(function (tab)
+chrome.browserAction.onClicked.addListener(function (e)
 {
-  ButtonState();
-});
-chrome.runtime.onInstalled.addListener(function (details)
+  ButtonState()
+}), chrome.runtime.onInstalled.addListener(function (e)
 {
-  initializeDefaultValues();
+  initializeDefaultValues()
 });
