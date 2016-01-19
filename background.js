@@ -1,6 +1,5 @@
 // Copyright (c) 2016 H@mdi & KC.
-initializeDefaultValues();
-var Website = ["ieeexplore.iee", "link.springer", "sciencedirect", "dl.acm","onlinelibrary.wiley"];
+var Website = ["ieeexplore.iee", "link.springer", "sciencedirect", "dl.acm", "onlinelibrary.wiley"];
 var Button_state = ["Sci-trick [enabled]", "Sci-trick [disabled]", "icon/enabled.png", "icon/disabled.png"]
 
 function CheckWebsite(tab, changeInfo)
@@ -28,7 +27,6 @@ function initializeDefaultValues()
     title: "Sci-trick [enabled]"
   });
 }
-
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab)
 {
   if (localStorage.getItem('state') == 1)
@@ -48,10 +46,8 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab)
     }
   }
 });
-
 chrome.browserAction.onClicked.addListener(function (tab)
 {
-  
   if (localStorage.getItem('state') == 0)
   {
     localStorage.setItem('state', 1);
@@ -76,4 +72,8 @@ chrome.browserAction.onClicked.addListener(function (tab)
       title: Button_state[1]
     });
   }
+});
+chrome.runtime.onInstalled.addListener(function (details)
+{
+  initializeDefaultValues();
 });
