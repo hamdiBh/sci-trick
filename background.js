@@ -1,5 +1,5 @@
 // Copyright (c) 2016 H@mdi & KC.
-var Website = ["ieeexplore.iee", "link.springer", "sciencedirect", "dl.acm", "onlinelibrary.wiley"];
+var Website = ["ieeexplore.iee", "link.springer", "sciencedirect", "dl.acm", "onlinelibrary.wiley", "jama.jamanetwork", "cpr.sagepub", "ehjcimaging.oxfordjournals", "tandfonline.com", "biomet.oxfordjournals"];
 var Button_state = ["Sci-trick [enabled]", "Sci-trick [disabled]", "icon/enabled.png", "icon/disabled.png"]
 
 function CheckWebsite(tab, changeInfo)
