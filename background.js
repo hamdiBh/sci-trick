@@ -1,5 +1,5 @@
 // Copyright (c) 2016 H@mdi & KC.
-var Website = ["ieeexplore.iee", "link.springer", "sciencedirect", "dl.acm", "onlinelibrary.wiley", "jama.jamanetwork", "cpr.sagepub", "cnu.sagepub.com", "ehjcimaging.oxfordjournals", "europace.oxfordjournals.org", "tandfonline.com", "biomet.oxfordjournals", "online.liebertpub", "nejm.org", "journals.cambridge.org"];
+var Website = ["ieeexplore.iee", "link.springer", "sciencedirect", "dl.acm", "onlinelibrary.wiley", "jama.jamanetwork", "cpr.sagepub", "cnu.sagepub.com", "ehjcimaging.oxfordjournals", "europace.oxfordjournals.org", "tandfonline.com", "biomet.oxfordjournals", "online.liebertpub", "nejm.org"];
 var Button_state = ["Sci-trick [enabled]", "Sci-trick [disabled]", "icon/enabled.png", "icon/disabled.png"]
 
 function CheckWebsite(tab, changeInfo)
