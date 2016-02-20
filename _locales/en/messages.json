@@ -1,0 +1,41 @@
+{
+   "625": {
+      "message": "Loading..."
+   },
+   "628": {
+      "message": "Scholar Settings"
+   },
+   "853": {
+      "message": "Sci-trick"
+   },
+   "854": {
+      "message": "Free access to scientific articles through sci-hub.io service."
+   },
+   "855": {
+      "message": "Lookup papers as you browse."
+   },
+   "859": {
+      "message": "To find a different article, select its title on the page."
+   },
+   "860": {
+      "message": "To find an article, select its title on the page."
+   },
+   "861": {
+      "message": "To find a different article, select and copy its title on the page."
+   },
+   "862": {
+      "message": "To find an article, select and copy its title on the page."
+   },
+   "920": {
+      "message": "Search"
+   },
+   "921": {
+      "message": "Unable to access the server."
+   },
+   "922": {
+      "message": "Open results in a new tab"
+   },
+   "923": {
+      "message": "No results for this search."
+   }
+}

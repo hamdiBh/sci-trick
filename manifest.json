@@ -1,26 +1,34 @@
-{
-  "manifest_version": 2,
-  "name": "Sci-trick",
-  
-  "icons":
+
+
+{"background":
   {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+   "browser_action": {
+    "default_icon": "icon/enabled.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "disable_promo.css" ],
+      "include_globs": [ "*/scholar_gsb_promo*" ],
+      "matches": [ "*://scholar.google.com/*" ]
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_854__",
+   "icons": {
     "128": "icon/favicon-128.png",
     "16": "icon/favicon-16.png",
     "48": "icon/favicon-48.png",
     "32": "icon/favicon-32.png",
     "96": "icon/favicon-96.png",
     "196": "icon/favicon-196.png"
-  },
-  "description": "Free access to scientific articles through sci-hub.io service.",
-  "version": "1.0",
-  "permissions": ["activeTab", "storage", "tabs"],
-  "browser_action":
-  {
-    "default_icon": "icon/enabled.png"
-  },
-  "background":
-  {
-    "scripts": ["background.js"],
-    "persistent": false
-  }
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "26.0",
+   "name": "__MSG_853__",
+  "permissions": ["activeTab", "storage", "tabs", "*://scholar.google.com/", "contextMenus" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0"
 }

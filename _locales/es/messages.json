@@ -1,0 +1,41 @@
+{
+   "625": {
+      "message": "Cargando..."
+   },
+   "628": {
+      "message": "Configuración de Google Académico"
+   },
+   "853": {
+      "message": "Sci-trick"
+   },
+   "854": {
+      "message": "El libre acceso a los artículos científicos a través del servicio sci-hub.io."
+   },
+   "855": {
+      "message": "Busca publicaciones académicas mientras navegas."
+   },
+   "859": {
+      "message": "Para encontrar un artículo diferente, selecciona su título en la página."
+   },
+   "860": {
+      "message": "Para encontrar un artículo, selecciona su título en la página."
+   },
+   "861": {
+      "message": "Para encontrar un artículo diferente, selecciona y copia su título en la página."
+   },
+   "862": {
+      "message": "Para encontrar un artículo, selecciona y copia su título en la página."
+   },
+   "920": {
+      "message": "Buscar"
+   },
+   "921": {
+      "message": "No se puede acceder al servidor."
+   },
+   "922": {
+      "message": "Abrir resultados en una pestaña nueva"
+   },
+   "923": {
+      "message": "No hay resultados para esta búsqueda."
+   }
+}
