@@ -1,4 +1,4 @@
-![sci-trick_chrome_extension](https://cloud.githubusercontent.com/assets/4891848/12380662/97fad76e-bd78-11e5-8c82-7135a5c315c3.png)Sci-trick
+!![sci-trick_chrome_extension_master_branch](https://cloud.githubusercontent.com/assets/4891848/12380662/97fad76e-bd78-11e5-8c82-7135a5c315c3.png)Sci-trick
 ==========
 
 Chrome extension that appends ".sci-hub.io" to active tab domain, allowing free access to scientific articles.
