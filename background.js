@@ -52,7 +52,7 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab)
 		var arr = origin_url.split("/");
 		if (CheckWebsite(tab, changeInfo))
 		{
-			arr[2] = arr[2] + ".sci-hub.bz";
+			arr[2] = arr[2] + ".sci-hub.tw";
 			var new_url = arr.join("/");
 			console.log("Redirecting " + tab.url + " to " + new_url), chrome.tabs.update(tab.id
 				, {
