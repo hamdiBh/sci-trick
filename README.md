@@ -1,7 +1,7 @@
 ![sci-trick_chrome_extension_master_branch](assets/logo.png)Sci-trick
 ==========
 
-Chrome extension that appends ".sci-hub.bz" to active tab domain, allowing free access to scientific articles.
+Chrome extension that appends ".sci-hub.se" to active tab domain, allowing free access to scientific articles.
 
 The hard work is done by [Sci-Hub].
 
