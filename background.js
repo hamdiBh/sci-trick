@@ -1,5 +1,19 @@
 // Copyright (c) 2016 H@mdi & KC.
-var Website = ["ieeexplore.iee", "link.springer", "sciencedirect", "dl.acm", "onlinelibrary.wiley", "jama.jamanetwork", "cpr.sagepub", "cnu.sagepub.com", "ehjcimaging.oxfordjournals", "europace.oxfordjournals.org", "tandfonline.com", "biomet.oxfordjournals", "online.liebertpub", "nejm.org"];
+var Website = ["ieeexplore.iee",
+ "link.springer", 
+ "sciencedirect", 
+ "dl.acm", 
+ "onlinelibrary.wiley",
+ "jama.jamanetwork",
+ "cpr.sagepub",
+ "cnu.sagepub.com", 
+ "ehjcimaging.oxfordjournals", 
+ "europace.oxfordjournals.org",
+ "tandfonline.com", 
+ "biomet.oxfordjournals", 
+ "online.liebertpub",
+ "nejm.org"];
+ 
 var Button_state = ["Sci-trick [enabled]", "Sci-trick [disabled]", "icon/enabled.png", "icon/disabled.png"]
 
 function CheckWebsite(tab, changeInfo) {
@@ -47,7 +61,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
         origin_url = tab.url;
         var arr = origin_url.split("/");
         if (CheckWebsite(tab, changeInfo)) {
-            arr[2] = arr[2] + ".sci-hub.tw";
+            arr[2] = arr[2] + ".sci-hub.se";
             var new_url = arr.join("/");
             console.log("Redirecting " + tab.url + " to " + new_url), chrome.tabs.update(tab.id
                 , {
