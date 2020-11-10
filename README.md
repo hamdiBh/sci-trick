@@ -14,8 +14,7 @@ You can load it as an unpacked extension in developer mode on Chrome. Follow thi
 1. download and unzip this repo: [📇]. Take note where you unzipped it.
 2. Open Chrome and access [`chrome://extensions`], or just open the menu → More Tools → Extensions.
 3. Check the developer mode in upper right.
-   ![sci-trick_chrome_extension_master_branch](assets/load_extension.png)
-   <p align="center">
+<p align="center">
   <img src="https://github.com/hamdiBh/sci-trick/blob/master/assets/load_extension.png?raw=true" alt=""/>
 </p>
 4. Click "Load unpacked extension" button
