@@ -3,7 +3,7 @@
 
 Chrome extension that appends ".sci-hub.se" to active tab domain, allowing free access to scientific articles.
 
-The hard work is done by [Sci-Hub].
+The hard work is done by [Sci-Hub], thank you [Alexandra Elbakyan].
 
 
 
@@ -26,3 +26,4 @@ You can load it as an unpacked extension in developer mode on Chrome. Follow thi
 [Sci-Hub]:http://sci-hub.se
 [`chrome://extensions`]:chrome://extensions
 [📇]:https://github.com/hamdiBh/sci-trick/archive/master.zip
+[Alexandra Elbakyan]:https://sci-hub.se/alexandra
